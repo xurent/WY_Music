@@ -177,7 +177,7 @@ void WlFFmpeg::start() {
     }
 
     end:
-    //supportMediacodec = false;
+
     if(supportMediacodec)
     {
         video->codectype = CODEC_MEDIACODEC;
@@ -418,3 +418,6 @@ int WlFFmpeg::getCodecContext(AVCodecParameters *codecpar, AVCodecContext **avCo
 
     return 0;
 }
+
+
+

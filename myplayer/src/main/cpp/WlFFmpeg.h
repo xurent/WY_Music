@@ -32,7 +32,7 @@ public:
     pthread_mutex_t seek_mutex;
 
     bool supportMediacodec = false;
-
+    bool openSupportMediacodec=true;//默认打开硬解码
     const AVBitStreamFilter *bsFilter = NULL;
 public:
     WlFFmpeg(WlPlaystatus *playstatus,WlCallJava *callJava1, const char * url);

@@ -57,6 +57,7 @@ public class WLPlayer {
     private Surface surface;
     private MediaCodec.BufferInfo info;
     private boolean isOpenVr=false;
+
     public WLPlayer() {
     }
 
@@ -228,23 +229,23 @@ public class WLPlayer {
     }
 
     public void onCallComplete(){
-
         stop();
         if(wlOnCompleteListener!=null){
             wlOnCompleteListener.onComplete();
         }
     }
+
     public void playNext(String url)
     {
         source=url;
         playNext=true;
         stop();
     }
+
     public void onCallNext(){
-
-        if(playNext){
-            playNext=false;
-
+        if(playNext) {
+            playNext = false;
+            parpared();
         }
     }
     public void onCallRenderYUV(int width,int height,byte[] y,byte[] u ,byte[] v){
@@ -283,6 +284,7 @@ public class WLPlayer {
      */
     public void initMediaCodec(String codecName, int width, int height, byte[] csd_0, byte[] csd_1)
     {
+        MyLog.d("硬解码初始化");
         if(surface != null)
         {
             try {

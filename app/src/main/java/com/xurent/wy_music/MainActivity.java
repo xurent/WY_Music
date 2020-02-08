@@ -154,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void next(View view) {
         wlPlayer.playNext("http://sc1.111ttt.cn/2018/1/03/13/396131202421.mp3");
+        wlPlayer.onCallNext();
     }
 
     public void VRplay(View view) {
