@@ -14,5 +14,52 @@
 
 # Demo预览
 
-![截图](a.png) image/a.gif
-![截图](a.png) image/b.gif
+![截图](image/a.gif)
+![截图](image/b.gif)
+
+
++ 播放传统视频
+
+```javascript
+
+ private WLPlayer wlPlayer;
+ private GlSurfaceView glSurfaceView;
+  //初始化
+  glSurfaceView=findViewById(R.id.wlglsurfaceview);
+  wlPlayer=new WLPlayer();
+  wlPlayer.setWlOnParparedListener(new WlOnParparedListener() {
+              @Override
+              public void onParpared() {
+                  System.out.println("播放");
+                  wlPlayer.start();
+              }
+          });
+  wlPlayer.setGlSurfaceView(glSurfaceView);
+    //播放
+  wlPlayer.setSource("http://vfx.mtime.cn/Video/2019/03/21/mp4/190321153853126488.mp4");
+  wlPlayer.parpared();
+
+```
++ 播放VR视频
+
+```javascript
+        private GlSurfaceView glSurfaceView;
+
+         //初始化
+        vrSurfaceView=findViewById(R.id.play_vr_glsv);
+        player=new WLPlayer();
+        player.setWlOnParparedListener(new WlOnParparedListener() {
+            @Override
+            public void onParpared() {
+                MyLog.d("开始播放----");
+                System.out.println("播放");
+                player.start();
+            }
+        });
+
+         player.setOpenVr(true);   //设置成播放VR视频
+         player.setVrSurfaceView(vrSurfaceView);
+         player.setSource(VIDEO_URL);
+         player.parpared();
+
+```
