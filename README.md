@@ -43,7 +43,7 @@
 + 播放VR视频
 
 ```javascript
-        private GlSurfaceView glSurfaceView;
+        private VrSurfaceView vrSurfaceView;
 
          //初始化
         vrSurfaceView=findViewById(R.id.play_vr_glsv);
@@ -63,3 +63,5 @@
          player.parpared();
 
 ```
+><font color=red>注意！传统视频是用GlSurfaceView,而VR视频是用VrSurfaceView显示</font>
+
