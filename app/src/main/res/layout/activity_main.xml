@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <com.xurent.myplayer.opengl.GlSurfaceView
+      android:id="@+id/wlglsurfaceview"
+      android:layout_width="match_parent"
+      android:layout_height="320dp">
+
+  </com.xurent.myplayer.opengl.GlSurfaceView>
+
+<SeekBar
+    android:id="@+id/seekbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+  android:layout_marginBottom="10dp"
+  ></SeekBar>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:onClick="Player"
+        android:layout_weight="1"
+        ></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停"
+        android:onClick="pause"
+        android:layout_weight="1"
+        ></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放"
+        android:onClick="resume"
+        android:layout_weight="1"
+        ></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止"
+        android:onClick="stop"
+        android:layout_weight="1"
+        ></Button>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换"
+        android:onClick="next"
+        android:layout_weight="1"
+        ></Button>
+
+
+  </LinearLayout>
+
+
+  <TextView
+      android:id="@+id/tv_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#222222"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="20dp"
+      android:text="00:00/00:00"
+      ></TextView>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:onClick="VRplay"
+      android:text="VR播放器">
+
+  </Button>
+
+</LinearLayout>
