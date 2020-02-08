@@ -1,4 +1,4 @@
-# WY_Music
+# VR_Video-Play
 万能播放器
 
 ##  支持 x86 cpu arm架构
@@ -109,3 +109,5 @@ public interface WlOnPauseResumeListener  //视频暂停回调
 public interface WlOntimeInfoListener   //播放时间信息回调
 
 ```
+
+## Create By Xurent 2020/02/08
