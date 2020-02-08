@@ -8,7 +8,11 @@
 ### 2、优先选用GPU解码，解码速度更快
 ### 3、支持软解码和硬解码
 ### 4、直接用mediacodec解码avpacket数据。
+### 5、支持用于传统直播和VR直播
+### 6、底层使用FFmpeg解码支持各种格式的音视频播放
+### 7、支持rtmp,http,hls等多种流媒体协议
 
 # Demo预览
 
-![截图](a.png) 
+![截图](a.png) image/a.gif
+![截图](a.png) image/b.gif
